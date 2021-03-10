@@ -1,4 +1,4 @@
-# mrtimeey.github.io
+# github-pages-example
 
 ## Project setup
 ```
@@ -10,14 +10,10 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Deploys version to gh pages branch (execution in GitBash)
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+npm install
+npm run deploy
 ```
 
 ### Customize configuration
