@@ -46,13 +46,13 @@ export default {
   position: fixed;
   right: 10px;
   bottom: 10px;
-  background-color: white;
+  background: hsla(0,0%,100%,0.6);
   padding: 5px 10px 5px 10px;
   border-radius: 10px;
-  font-size: 15px;
-  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
 }
 a {
-  color: darkgrey;
+  color: lighten(black, 20%);
 }
 </style>
