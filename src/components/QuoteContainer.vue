@@ -2,9 +2,15 @@
   <div class="fullscreen-centered">
     <div class="quote-wrapper">
       <transition name="fade">
-        <div class="quote-card" v-if="$store.getters['quoteLoaded']">
+        <div class="quote-card" :key="'quote-card'" v-if="$store.getters['quoteLoaded']">
           <span class="quote-text">{{ $store.state.quote }}</span>
           <span class="quote-author">{{ $store.state.author }}</span>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="quote-refresh" :key="'quote-card'" @click="$store.dispatch('loadQuote')"
+             v-if="$store.getters['quoteLoaded']">
+          <em class="fas fa-sync"></em>
         </div>
       </transition>
     </div>
@@ -89,15 +95,31 @@ export default {
 
   padding: 1rem;
 
-  -webkit-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
-  -moz-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
-  box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 3px 7px 2px rgba(0, 0, 0, 0.1);
+}
+
+.quote-refresh {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 0 10px 0;
+  border-radius: 40px;
+  background: hsla(0, 0%, 100%, 0.6);
+  width: 50px;
+  cursor: pointer;
+
+  em {
+    font-size: x-large;
+  }
 }
 
 .fade-enter-active, .fade-leave-active {
   transition: opacity 2.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 

@@ -10,7 +10,7 @@
         <a href="https://unsplash.com/photos/4IxPVkFGJGI" target="_blank">Unsplash</a>
     </span>
     <div :key="'link-list'" class="link-list text-bubble" v-if="isMounted">
-      <a :href="link.url" target="_blank" v-for="link in links" :key="link.url">
+      <a :href="link.url" target="_blank" v-for="(link, index) in links" :key="'icon'.concat('_', index)">
         <em :class="link.icon"></em>
       </a>
     </div>
