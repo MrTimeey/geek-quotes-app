@@ -107,4 +107,26 @@ export default {
   opacity: 0;
 }
 
+@media screen and (max-width: 768px) {
+  .quote-card {
+    max-width: 80%;
+  }
+  .quote-text {
+    font-size: 1.5rem;
+    padding: .75rem;
+  }
+  .quote-author {
+    font-size: 0.8rem;
+  }
+  .quote-text:before {
+    left: -3.2rem;
+    font-size: 6rem;
+  }
+
+  .quote-text:after {
+    right: -3.2rem;
+    font-size: 6rem;
+  }
+}
+
 </style>
