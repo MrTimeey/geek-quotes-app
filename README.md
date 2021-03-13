@@ -1,4 +1,9 @@
-# github-pages-example
+# geek-quotes-app
+
+Simple vue application for displaying geek quotes.
+It's a learning project for hosting a vue-application on github-pages.
+
+It consumes the [geek-quote-api](https://github.com/FotieMConstant/geek-quote-api) by [FotieMConstant](https://github.com/FotieMConstant).
 
 ## Project setup
 ```
@@ -15,6 +20,3 @@ npm run serve
 npm install
 npm run deploy
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

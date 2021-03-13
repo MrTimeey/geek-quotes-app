@@ -1,7 +1,12 @@
 {
-  "name": "github-pages-example",
+  "name": "geek-quotes-app",
   "version": "0.1.0",
-  "private": true,
+  "description": "An application for displaying random geek quotes",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrTimeey/geek-quotes-app"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -12,6 +17,12 @@
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
+  "keywords": [
+    "geek-quote",
+    "quotes-application",
+    "vuejs",
+    "github-pages"
+  ],
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
