@@ -13,10 +13,6 @@
     "lint": "vue-cli-service lint",
     "deploy": "node scripts/gh-pages-deploy.js"
   },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^2.6.11"
-  },
   "keywords": [
     "geek-quote",
     "quotes-application",
@@ -28,6 +24,10 @@
     "url": "https://github.com/MrTimeey"
   },
   "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11",
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
