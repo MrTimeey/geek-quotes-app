@@ -2,7 +2,8 @@
   <div class="background-wrapper">
     <div class="background" :style="imageStyle">
     </div>
-    <span class="author">Photo by <a href="https://unsplash.com/@headwayio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Headway</a> on <a href="/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    <span class="author">
+      Photo by <a href="https://unsplash.com/@kensuarez?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ken Suarez</a> on <a href="/s/photos/nerd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   </span>
   </div>
 </template>
@@ -12,7 +13,7 @@ export default {
   name: "Background",
   data() {
     return {
-      image: 'https://source.unsplash.com/NWmcp5fE_4M/1920x1600',
+      image: 'https://source.unsplash.com/4IxPVkFGJGI/1920x1600',
     }
   },
   computed: {
