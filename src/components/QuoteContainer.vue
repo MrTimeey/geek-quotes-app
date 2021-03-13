@@ -32,7 +32,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
 .fullscreen-centered {
   position: fixed;
@@ -107,7 +106,7 @@ export default {
 }
 
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 1.5s;
+  transition: opacity 2.5s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;

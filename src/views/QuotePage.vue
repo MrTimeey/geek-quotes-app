@@ -1,19 +1,19 @@
 <template>
   <div class="background-wrapper">
     <div class="background" :style="imageStyle">
-      <UnsplashAuthor/>
+      <AdditionalTextFields/>
       <QuoteContainer/>
     </div>
   </div>
 </template>
 
 <script>
-import UnsplashAuthor from "@/components/UnsplashAuthor";
+import AdditionalTextFields from "@/components/AdditionalTextFields";
 import QuoteContainer from "@/components/QuoteContainer";
 
 export default {
   name: "QuotePage",
-  components: {UnsplashAuthor, QuoteContainer},
+  components: {AdditionalTextFields, QuoteContainer},
   data() {
     return {
       image: 'https://source.unsplash.com/4IxPVkFGJGI/1920x1600',

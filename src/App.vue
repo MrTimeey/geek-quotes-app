@@ -16,6 +16,7 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
 
 #app {
   -webkit-font-smoothing: antialiased;
