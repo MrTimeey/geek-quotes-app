@@ -1,10 +1,12 @@
 <template>
   <div class="fullscreen-centered">
     <div class="quote-wrapper">
-      <div class="quote-card">
-      <span class="quote-text">{{ quote }}</span>
-      <span class="quote-author">{{ author }}</span>
-      </div>
+      <transition name="fade">
+        <div class="quote-card" v-if="quote">
+          <span class="quote-text">{{ quote }}</span>
+          <span class="quote-author">{{ author }}</span>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -13,9 +15,19 @@
 export default {
   name: "QuoteContainer",
   data: () => ({
-    quote: "Programming is like any other sport. You might know the rules but you have to play to learn.",
-    author: "Zuckerbeg"
-  })
+    quote: "",
+    author: "",
+  }),
+  methods: {
+    async loadQuote() {
+      let response = await this.$axios.get("https://geek-quote-api.herokuapp.com/v1/quote");
+      this.quote = response.data.quote;
+      this.author = response.data.author;
+    }
+  },
+  mounted() {
+    this.loadQuote();
+  }
 }
 </script>
 
@@ -39,6 +51,7 @@ export default {
   align-items: center;
   justify-content: center;
   font-family: 'Special Elite', cursive;
+  z-index: -1;
 }
 
 .quote-text {
@@ -57,13 +70,20 @@ export default {
 }
 
 .quote-card {
-  background: hsla(0,0%,100%,0.6);
+  background: hsla(0, 0%, 100%, 0.6);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 1.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 
 </style>

@@ -1,28 +1,23 @@
 <template>
   <div id="app">
-    <Background/>
-    <QuoteContainer/>
+    <QuotePage/>
   </div>
 </template>
 
 <script>
-import Background from "@/components/Background";
-import QuoteContainer from "@/components/QuoteContainer";
 
+import QuotePage from "@/views/QuotePage";
 export default {
   name: 'App',
   components: {
-    QuoteContainer,
-    Background,
+    QuotePage
   },
 }
 </script>
 
 <style>
 
-
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
