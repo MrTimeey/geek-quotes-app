@@ -1,22 +1,25 @@
 <template>
   <div id="app">
     <Background/>
+    <QuoteContainer/>
   </div>
 </template>
 
 <script>
 import Background from "@/components/Background";
+import QuoteContainer from "@/components/QuoteContainer";
 
 export default {
   name: 'App',
   components: {
+    QuoteContainer,
     Background,
   },
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
