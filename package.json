@@ -23,6 +23,11 @@
     "vuejs",
     "github-pages"
   ],
+  "author": {
+    "name": "MrTimeey",
+    "url": "https://github.com/MrTimeey"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
