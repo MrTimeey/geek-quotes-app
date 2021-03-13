@@ -98,6 +98,10 @@ export default {
   justify-content: center;
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  -webkit-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
 }
 
 .fade-enter-active, .fade-leave-active {

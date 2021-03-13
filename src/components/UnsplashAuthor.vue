@@ -42,6 +42,9 @@ export default {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 20px;
   z-index: 9999;
+  -webkit-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
+  -moz-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
+  box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
 }
 
 a {
