@@ -64,6 +64,27 @@ export default {
   padding: .5rem;
 }
 
+.quote-text:before,
+.quote-text:after {
+  position: absolute;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-size: 8rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+.quote-text:before {
+  content: '“';
+  left: -5rem;
+  top: -2rem;
+}
+
+.quote-text:after {
+  content: '”';
+  right: -5rem;
+  bottom: 1rem;
+}
+
 .quote-author {
   line-height: 3;
   font-style: italic;
