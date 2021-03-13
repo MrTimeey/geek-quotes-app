@@ -75,13 +75,13 @@ export default {
 
 .quote-text:before {
   content: '“';
-  left: -5rem;
+  left: -6rem;
   top: -2rem;
 }
 
 .quote-text:after {
   content: '”';
-  right: -5rem;
+  right: -6rem;
   bottom: 1rem;
 }
 
@@ -99,6 +99,8 @@ export default {
   border-top-left-radius: 30px;
   border-bottom-right-radius: 30px;
 
+  padding: 1rem;
+
   -webkit-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
   -moz-box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
   box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.1);
@@ -114,6 +116,7 @@ export default {
 @media screen and (max-width: 768px) {
   .quote-card {
     max-width: 80%;
+    padding: 0;
   }
   .quote-text {
     font-size: 1.5rem;
