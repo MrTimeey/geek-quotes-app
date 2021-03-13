@@ -1,7 +1,7 @@
 <template>
   <transition-group name="fade">
     <div :key="'title'" class="app-title text-bubble" v-if="isMounted" @click="$store.dispatch('loadQuote')">
-      geek-quote-app.
+      geek-quotes-app.
     </div>
     <span :key="'author'" class="author text-bubble" v-if="isMounted">
         Photo by <a
