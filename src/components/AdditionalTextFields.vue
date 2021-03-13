@@ -85,6 +85,10 @@ export default {
 
 a {
   color: lighten(black, 20%);
+
+}
+a:hover {
+  color: black;
 }
 
 .fade-enter-active, .fade-leave-active {
