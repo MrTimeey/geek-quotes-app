@@ -2,9 +2,9 @@
   <div class="fullscreen-centered">
     <div class="quote-wrapper">
       <transition name="fade">
-        <div class="quote-card" v-if="quote">
-          <span class="quote-text">{{ quote }}</span>
-          <span class="quote-author">{{ author }}</span>
+        <div class="quote-card" v-if="$store.getters['quoteLoaded']">
+          <span class="quote-text">{{ $store.state.quote }}</span>
+          <span class="quote-author">{{ $store.state.author }}</span>
         </div>
       </transition>
     </div>
@@ -14,19 +14,8 @@
 <script>
 export default {
   name: "QuoteContainer",
-  data: () => ({
-    quote: "",
-    author: "",
-  }),
-  methods: {
-    async loadQuote() {
-      let response = await this.$axios.get("https://geek-quote-api.herokuapp.com/v1/quote");
-      this.quote = response.data.quote;
-      this.author = response.data.author;
-    }
-  },
   mounted() {
-    this.loadQuote();
+    this.$store.dispatch("loadQuote");
   }
 }
 </script>
