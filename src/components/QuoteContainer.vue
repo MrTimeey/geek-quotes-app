@@ -1,5 +1,8 @@
 <template>
   <div class="fullscreen-centered">
+      <div class="quote-refresh loading-container" v-if="showLoading">
+        <em class="loading fas fa-sync"></em>
+      </div>
     <div class="quote-wrapper">
       <transition name="fade">
         <div class="quote-card" :key="'quote-card'" v-if="$store.getters['quoteLoaded']">
@@ -22,6 +25,11 @@ export default {
   name: "QuoteContainer",
   mounted() {
     this.$store.dispatch("loadQuote");
+  },
+  computed: {
+    showLoading() {
+      return !this.$store.getters['quoteLoaded'] && !this.$store.state.firstRequestDone;
+    }
   }
 }
 </script>
@@ -111,6 +119,36 @@ export default {
 
   em {
     font-size: x-large;
+  }
+}
+
+.loading-container {
+  top: 50%;
+  left: 50%;
+}
+
+.loading {
+  -webkit-animation: spin 1.5s linear infinite;
+  -moz-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
