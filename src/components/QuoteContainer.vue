@@ -2,6 +2,7 @@
   <div class="fullscreen-centered">
       <div class="quote-refresh loading-container" v-if="showLoading">
         <em class="loading fas fa-sync"></em>
+        <span>Loading quote!</span>
       </div>
     <div class="quote-wrapper">
       <transition name="fade">
@@ -123,8 +124,16 @@ export default {
 }
 
 .loading-container {
+  display: flex;
+  flex-direction: column;
   top: 50%;
   left: 50%;
+  width: 150px;
+  font-family: 'Special Elite', cursive;
+  font-size: 1.5rem;
+  span {
+    margin-top: 20px;
+  }
 }
 
 .loading {
