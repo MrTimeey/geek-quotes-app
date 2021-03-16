@@ -1,6 +1,6 @@
 <template>
   <transition-group name="fade">
-    <div :key="'title'" class="app-title text-bubble" v-if="isMounted" @click="$store.dispatch('loadQuote')">
+    <div :key="'title'" class="app-title" v-if="isMounted" @click="$store.dispatch('loadQuote')">
       geek-quotes-app.
     </div>
     <span :key="'author'" class="author text-bubble" v-if="isMounted">
@@ -67,8 +67,9 @@ export default {
   left: 10px;
   top: 10px;
   font-family: 'Nunito', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
+  color: hsla(0, 0%, 100%, 0.8);
 }
 
 .link-list {
