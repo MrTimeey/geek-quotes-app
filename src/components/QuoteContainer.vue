@@ -53,7 +53,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Nunito', sans-serif;
   z-index: -1;
 }
 
@@ -78,13 +78,13 @@ export default {
 
 .quote-text:before {
   content: '“';
-  left: -6rem;
+  left: -5rem;
   top: -2rem;
 }
 
 .quote-text:after {
   content: '”';
-  right: -6rem;
+  right: -5rem;
   bottom: 1rem;
 }
 
@@ -129,7 +129,7 @@ export default {
   top: 50%;
   left: 50%;
   width: 150px;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
   span {
     margin-top: 20px;

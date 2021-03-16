@@ -66,7 +66,7 @@ export default {
   position: fixed;
   left: 10px;
   top: 10px;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Nunito', sans-serif;
   font-size: 30px;
   cursor: pointer;
 }

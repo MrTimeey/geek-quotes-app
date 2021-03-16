@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
 
 #app {
   -webkit-font-smoothing: antialiased;
